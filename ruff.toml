@@ -1,0 +1,78 @@
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[lint]
+select = [
+    "F",      # pyflakes
+    "E1",     # pyflakes indentation
+    "E2",     # pyflakes whitespace
+    "E3",     # pyflakes blank lines
+    "E4",     # pyflakes module imports
+    "E502",   # pyflakes redundant-backslash
+    "E7",     # pyflakes misc
+    "I",      # isort
+    "N",      # pep8-naming
+    "D3",     # pydocstyle string style """ and r"""
+    "ANN",    # flake8-annotations
+    "RUF",    # ruff-specific rules
+    "PERF",   # Perflint
+    "FURB",   # refurb
+    "NPY",    # NumPy-specific rules
+    "FLY",    # flynt, static-join-to-f-string
+    "PL",     # pylint
+    "ERA001", # eradicate, commented-out-code, probably only enable for main branch
+    "YTT",    # flake8-2020, misuse of sys.version or sys.version_info
+    "ASYNC",  # flake8-async
+    "S",      # flake8-bandit, security
+    "BLE",    # flake8-blind-except
+    "FBT",    # flake8-boolean-trap, only keyword boolean argument
+    "A",      # flake8-builtins, variable shadowing
+    "C4",     # flake8-comprehensions
+    "UP",     # pyupgrade, modern code
+    "ICN001", # flake8-import-conventions, unconventional-import-alias
+    "ICN002", # flake8-import-conventions, banned-import-alias
+    "LOG",    # flake8-logging
+    "PIE",    # flake8-pie, misc lints
+    "T20",    # flake8-print, don't use print statements in production code
+    "RET",    # flake8-return
+    "SLF",    # flake8-self, external access private (_*) member
+    "SIM",    # flake8-simplify
+    "TID252", # flake8-tidy-imports, relative-imports
+    "TCH",    # flake8-type-checking
+    "PTH",    # flake8-use-pathlib, promote use of pathlib
+    "PGH",    # pygrep-hooks, explicit typing / linting ignores
+    # probably viable rules, which don't currently fit our style
+    # "B",      # flake8-bugbear, probably too intrusive currently
+    # "EM",     # flake8-errmsg, traceback readability
+    # "TRY",    # tryceratops, Prevent Exception Handling AntiPatterns in Python
+    # maybe viable, but not suitable
+    # "D",      # pydocstyle, we don't really have docstrings ...
+    # "INP001", # flake8-no-pep420, checks for __init__.py only in build/python or site-packages/blickfeld
+
+]
+ignore = [
+    "ANN002",  # missing-type-args
+    "ANN003",  # missing-type-kwargs
+    "ANN101",  # missing-type-self
+    "ANN102",  # missing-type-cls
+    "D100",    # undocumented-public-module
+    "D202",    # no-blank-line-after-function
+    "D417",    # undocumented-param, we don't really use the docstrings
+    "N802",    # invalid-function-name, flags protobuf services https://docs.astral.sh/ruff/settings/#lint_pep8-naming_extend-ignore-names
+    "PLR09",   # too-many-*, readability might benefit
+    "PLR1702", # too-many-nested-blocks
+    "PLR6301", # no-self-use
+    # enable later
+    "RUF029", # unused-async
+    "BLE001", # blind-except
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
