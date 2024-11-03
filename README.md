@@ -3,7 +3,7 @@ super simple image advent calendar
 
 ## install
 
-follow https://winstall.app/apps/astral-sh.uv for uv
+install uv https://docs.astral.sh/uv/getting-started/installation/ | https://winstall.app/apps/astral-sh.uv
 
 in project directory
 
